@@ -9,7 +9,8 @@ const router = express.Router();
 router.get("/getInfoEmployee", getEmployee);
 router.get("/api/v1/employee", auth, getEmployee);
 router.get("/api/v1/employee/:id", auth, getEmployeeByID);
-router.post("/api/v1/employee", validationDaftar, auth, saveEmployee);
+// router.post("/api/v1/employee", validationDaftar, auth, saveEmployee);
+router.post("/api/v1/employee", validationDaftar, saveEmployee);
 router.patch("/api/v1/employee/:id", validationDaftar, auth, updateEmployee);
 router.delete("/api/v1//employee/:id", auth, deleteEmployee);
 
